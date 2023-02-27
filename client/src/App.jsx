@@ -4,20 +4,20 @@ import "./App.scss";
 import { useState } from "react";
 
 function App() {
-  const [balance, setBalance] = useState(0);
-  const [address, setAddress] = useState("");
+    const [balance, setBalance] = useState(0);
+    const [account, setAccount] = useState("");
 
-  return (
-    <div className="app">
-      <Wallet
-        balance={balance}
-        setBalance={setBalance}
-        address={address}
-        setAddress={setAddress}
-      />
-      <Transfer setBalance={setBalance} address={address} />
-    </div>
-  );
+    return (
+        <div className="app">
+            <Wallet
+                balance={balance}
+                setBalance={setBalance}
+                account={account}
+                setAccount={setAccount}
+            />
+            <Transfer setBalance={setBalance} account={account} />
+        </div>
+    );
 }
 
 export default App;
